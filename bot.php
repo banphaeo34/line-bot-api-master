@@ -65,11 +65,11 @@ if(!is_null($events)){
     switch ($typeMessage){
         case 'text':
             switch ($userMessage) {
-                case "A":
-                    $textReplyMessage = "คุณพิมพ์ A";
+                case "ใช่แฟนแนนไหม":
+                    $textReplyMessage = "ใช่ครับ";
                     break;
-                case "B":
-                    $textReplyMessage = "คุณพิมพ์ B";
+                case "ชื่ออะไร":
+                    $textReplyMessage = "บอกไม่ได้ แนนไม่ให้บอก";
                     break;
                 default:
                     $textReplyMessage = " คุณไม่ได้พิมพ์ A และ B";
