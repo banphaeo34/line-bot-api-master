@@ -65,14 +65,14 @@ if(!is_null($events)){
     switch ($typeMessage){
         case 'text':
             switch ($userMessage) {
-                case "ใช่แฟนแนนไหม":
-                    $textReplyMessage = "ใช่ครับ";
+                case "เว็บโรงพยาบาล":
+                    $textReplyMessage = "http://www.bphosp.or.th/";
                     break;
-                case "ชื่ออะไร":
-                    $textReplyMessage = "บอกไม่ได้ แนนไม่ให้บอก";
+                case "สวัสดี":
+                    $textReplyMessage = "สวัสดีครับ";
                     break;
                 default:
-                    $textReplyMessage = " คุณไม่ได้พิมพ์ A และ B";
+                    $textReplyMessage = "ฉันไม่เข้าใจคำถาม";
                     break;                                      
             }
             break;
