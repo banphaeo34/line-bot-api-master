@@ -3,7 +3,7 @@ $Setup_Server = '61.90.186.213';
 $Setup_User = 'root';
 $Setup_Pwd = '**11305bpi';
 
-$Setup_Database = 'line';
+$Setup_Database = 'test';
 
 mysql_connect($Setup_Server,$Setup_User,$Setup_Pwd);
 
