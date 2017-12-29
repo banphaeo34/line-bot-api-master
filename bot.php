@@ -1,19 +1,19 @@
 <?php
-// �óյ�ͧ��õ�Ǩ�ͺ����� error ����Դ 3 ��÷Ѵ��ҧ������ӧҹ �ó���� ��� comment �Դ�
+// ¡Ã³ÕµéÍ§¡ÒÃµÃÇ¨ÊÍº¡ÒÃá¨é§ error ãËéà»Ô´ 3 ºÃÃ·Ñ´ÅèÒ§¹ÕéãËé·Ó§Ò¹ ¡Ã³ÕäÁè ãËé comment »Ô´ä»
 ini_set('display_errors', 1);
 ini_set('display_startup_errors', 1);
 error_reporting(E_ALL);
  
 // include composer autoload
-require_once '../vendor/autoload.php';
+require_once './vendor/autoload.php';
  
-// ��õ������ǡѺ bot
+// ¡ÒÃµÑé§à¡ÕèÂÇ¡Ñº bot
 require_once 'bot_settings.php';
  
-// �ó��ա���������͡Ѻ�ҹ������
+// ¡Ã³ÕÁÕ¡ÒÃàª×èÍÁµèÍ¡Ñº°Ò¹¢éÍÁÙÅ
 //require_once("dbconnect.php");
  
-///////////// ��ǹ�ͧ������¡��ҹ class ��ҹ namespace
+///////////// ÊèÇ¹¢Í§¡ÒÃàÃÕÂ¡ãªé§Ò¹ class ¼èÒ¹ namespace
 use LINE\LINEBot;
 use LINE\LINEBot\HTTPClient;
 use LINE\LINEBot\HTTPClient\CurlHTTPClient;
@@ -48,23 +48,23 @@ use LINE\LINEBot\MessageBuilder\TemplateBuilder\ConfirmTemplateBuilder;
 use LINE\LINEBot\MessageBuilder\TemplateBuilder\ImageCarouselTemplateBuilder;
 use LINE\LINEBot\MessageBuilder\TemplateBuilder\ImageCarouselColumnTemplateBuilder;
  
-// �������͡Ѻ LINE Messaging API
+// àª×èÍÁµèÍ¡Ñº LINE Messaging API
 $httpClient = new CurlHTTPClient(LINE_MESSAGE_ACCESS_TOKEN);
 $bot = new LINEBot($httpClient, array('channelSecret' => LINE_MESSAGE_CHANNEL_SECRET));
  
-// ��������Ѻ����觤���Ңͧ LINE Messaging API
+// ¤ÓÊÑè§ÃÍÃÑº¡ÒÃÊè§¤èÒÁÒ¢Í§ LINE Messaging API
 $content = file_get_contents('php://input');
  
-// �ŧ��ͤ����ٻẺ JSON  ���������ç���ҧ����� array
+// á»Å§¢éÍ¤ÇÒÁÃÙ»áºº JSON  ãËéÍÂÙèã¹â¤Ã§ÊÃéÒ§µÑÇá»Ã array
 $events = json_decode($content, true);
 if(!is_null($events)){
-    // ����դ�� ���ҧ������� replyToken �����ҹ
+    // ¶éÒÁÕ¤èÒ ÊÃéÒ§µÑÇá»Ãà¡çº replyToken äÇéãªé§Ò¹
     $replyToken = $events['events'][0]['replyToken'];
 }
-// ��ǹ�ͧ����觨Ѵ�����ٻẺ��ͤ�������Ѻ��
+// ÊèÇ¹¢Í§¤ÓÊÑè§¨Ñ´àµÕÂÁÃÙ»áºº¢éÍ¤ÇÒÁÊÓËÃÑºÊè§
 $textMessageBuilder = new TextMessageBuilder(json_encode($events));
  
-//l ��ǹ�ͧ����觵ͺ��Ѻ��ͤ���
+//l ÊèÇ¹¢Í§¤ÓÊÑè§µÍº¡ÅÑº¢éÍ¤ÇÒÁ
 $response = $bot->replyMessage($replyToken,$textMessageBuilder);
 if ($response->isSucceeded()) {
     echo 'Succeeded!';
