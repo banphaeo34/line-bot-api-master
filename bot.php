@@ -81,8 +81,8 @@ if(!is_null($events)){
             break;  
     }
 }
-// ÊèÇ¹¢Í§¤ÓÊÑè§¨Ñ´àµÕÂÁÃÙ»áºº¢éÍ¤ÇÒÁÊÓËÃÑºÊè§
-$textMessageBuilder = new TextMessageBuilder(json_encode($events));
+// ส่วนของคำสั่งจัดเตียมรูปแบบข้อความสำหรับส่ง
+$textMessageBuilder = new TextMessageBuilder($textReplyMessage);
  
 //l ÊèÇ¹¢Í§¤ÓÊÑè§µÍº¡ÅÑº¢éÍ¤ÇÒÁ
 $response = $bot->replyMessage($replyToken,$textMessageBuilder);
