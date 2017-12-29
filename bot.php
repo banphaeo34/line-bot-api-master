@@ -11,7 +11,7 @@ require_once './vendor/autoload.php';
 require_once 'bot_settings.php';
  
 // ¡Ã³ÕÁÕ¡ÒÃàª×èÍÁµèÍ¡Ñº°Ò¹¢éÍÁÙÅ
-require_once("dbconnect.php");
+//require_once("dbconnect.php");
  
 ///////////// ÊèÇ¹¢Í§¡ÒÃàÃÕÂ¡ãªé§Ò¹ class ¼èÒ¹ namespace
 use LINE\LINEBot;
