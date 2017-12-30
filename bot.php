@@ -72,7 +72,7 @@ if(!is_null($events)){
                     $textReplyMessage = "สวัสดีครับ";
                     break;
                 default:
-                    $textReplyMessage = "http://61.90.186.213/line-bot-api-master/hbd.php";
+                    $textReplyMessage = "http://mywork.servebeer.com/line-bot-api-master/hbd.php";
                     break;                                      
             }
             break;
