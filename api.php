@@ -19,8 +19,8 @@ $json = file_get_contents('https://api.mlab.com/api/1/databases/heroku_js2t8p1k/
 $data = json_decode($json);
 $isData=sizeof($data);
 
-if (strpos($_msg, 'ÊÍ¹à»ç´') !== false) {
-  if (strpos($_msg, 'ÊÍ¹à»ç´') !== false) {
+if (strpos($_msg, 'กล้วยไม้') !== false) {
+  if (strpos($_msg, 'กล้วยไม้') !== false) {
     $x_tra = str_replace("ÊÍ¹à»ç´","", $_msg);
     $pieces = explode("|", $x_tra);
     $_question=str_replace("[","",$pieces[0]);
@@ -44,7 +44,7 @@ if (strpos($_msg, 'ÊÍ¹à»ç´') !== false) {
     $arrPostData = array();
     $arrPostData['replyToken'] = $arrJson['events'][0]['replyToken'];
     $arrPostData['messages'][0]['type'] = "text";
-    $arrPostData['messages'][0]['text'] = '¢Íº¤Ø³·ÕèÊÍ¹à»ç´';
+    $arrPostData['messages'][0]['text'] = 'ขอบคุณที่สอนกล้วยไม้';
   }
 }else{
   if($isData >0){
@@ -58,7 +58,7 @@ if (strpos($_msg, 'ÊÍ¹à»ç´') !== false) {
     $arrPostData = array();
     $arrPostData['replyToken'] = $arrJson['events'][0]['replyToken'];
     $arrPostData['messages'][0]['type'] = "text";
-    $arrPostData['messages'][0]['text'] = '¡êÒºº ¤Ø³ÊÒÁÒÃ¶ÊÍ¹ãËé©ÅÒ´ä´éà¾ÕÂ§¾ÔÁ¾ì: ÊÍ¹à»ç´[¤Ó¶ÒÁ|¤ÓµÍº]';
+    $arrPostData['messages'][0]['text'] = 'ก๊าบบ คุณสามารถสอนให้ฉลาดได้เพียงพิมพ์: สอนกล้วยไม้[คำถาม|คำตอบ]';
   }
 }
 
