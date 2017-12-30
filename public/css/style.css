@@ -1,0 +1,113 @@
+/* CSS Document */
+.whitebg{
+-webkit-border-radius:10px;
+background:#FFFFFF;
+margin-top:50px;
+padding-top:1px;
+padding-bottom:1px;
+width:800px;
+}
+
+.shadow {
+ border: 5px solid white;
+    box-shadow: 0px 0px 18px rgba(0, 0, 0, 0.80);
+    -moz-box-shadow: 0px 0px 18px rgba(0, 0, 0, 0.80);
+    -webkit-box-shadow: 0px 0px 18px rgba(0, 0, 0, 0.80);
+}
+
+.win8-btn-success {
+	-moz-box-shadow: 0px 0px 7px -2px #3dc21b;
+	-webkit-box-shadow: 0px 0px 7px -2px #3dc21b;
+	box-shadow: 0px 0px 7px -2px #3dc21b;
+	background-color:#44c767;
+	-moz-border-radius:2px;
+	-webkit-border-radius:2px;
+	border-radius:2px;
+	border:1px solid #18ab29;
+	display:inline-block;
+	cursor:pointer;
+	color:#ffffff;
+	font-family:arial;
+	font-size:12px;
+	font-weight:bold;
+	padding:11px 14px;
+	text-decoration:none;
+	text-shadow:0px 1px 9px #2f6627;
+}
+.win8-btn-success:hover {
+	background-color:#5cbf2a;
+}
+.win8-btn-success:active {
+	position:relative;
+	top:1px;
+}
+
+.win8-btn-link{
+color:#F3F3F3;
+}
+.win8-btn-link:active{
+color:#CFCFCF;
+}
+
+.win8-btn-link:hover{
+color:#CCCCCC;
+text-decoration:underline;
+}
+
+.win8-btn-primary {
+	-moz-box-shadow: 0px 0px 7px -2px #276873;
+	-webkit-box-shadow: 0px 0px 7px -2px #276873;
+	box-shadow: 0px 0px 7px -2px #276873;
+	background-color:#599bb3;
+	-moz-border-radius:2px;
+	-webkit-border-radius:2px;
+	border-radius:2px;
+	border:1px solid #ffffff;
+	display:inline-block;
+	cursor:pointer;
+	color:#ffffff;
+	font-family:arial;
+	font-size:12px;
+	font-weight:bold;
+	padding:11px 14px;
+	text-decoration:none;
+	text-shadow:0px 1px 9px #3d768a;
+}
+.win8-btn-primary:hover {
+	background-color:#408c99;
+}
+.win8-btn-primary:active {
+	position:relative;
+	top:1px;
+}
+
+.win8-btn-danger {
+	-moz-box-shadow: 0px 0px 7px -2px #e67a73;
+	-webkit-box-shadow: 0px 0px 7px -2px #e67a73;
+	box-shadow: 0px 0px 7px -2px #e67a73;
+	background-color:#e4685d;
+	-moz-border-radius:2px;
+	-webkit-border-radius:2px;
+	border-radius:2px;
+	border:1px solid #ffffff;
+	display:inline-block;
+	cursor:pointer;
+	color:#ffffff;
+	font-family:arial;
+	font-size:12px;
+	font-weight:bold;
+	padding:11px 14px;
+	text-decoration:none;
+	text-shadow:0px 1px 9px #b23e35;
+}
+.win8-btn-danger:hover {
+	background-color:#eb675e;
+}
+.win8-btn-danger:active {
+	position:relative;
+	top:1px;
+}
+
+.btn-manage{color:#ffffff;background-color:#9954bb;border-color:#9954bb}.btn-manage:hover,.btn-manage:focus,.btn-manage:active,.btn-manage.active,.open .dropdown-toggle.btn-manage{color:#ffffff;background-color:#8441a5;border-color:#783c96}.btn-manage:active,.btn-manage.active,.open .dropdown-toggle.btn-manage{background-image:none}.btn-manage.disabled,.btn-manage[disabled],fieldset[disabled] .btn-manage,.btn-manage.disabled:hover,.btn-manage[disabled]:hover,fieldset[disabled] .btn-manage:hover,.btn-manage.disabled:focus,.btn-manage[disabled]:focus,fieldset[disabled] .btn-info:focus,.btn-info.disabled:active,.btn-manage[disabled]:active,fieldset[disabled] .btn-manage:active,.btn-manage.disabled.active,.btn-manage[disabled].active,fieldset[disabled] .btn-manage.active{background-color:#9954bb;border-color:#9954bb}.btn-manage .badge{color:#9954bb;background-color:#ffffff}
+
+.button{display:inline-block;margin-bottom:0;font-weight:normal;text-align:center;vertical-align:middle;cursor:pointer;background-image:none;border:1px solid transparent;white-space:nowrap;padding:10px 18px;font-size:15px;line-height:1.42857143;border-radius:0;-webkit-user-select:none;-moz-user-select:none;-ms-user-select:none;user-select:none}.button:focus,.button:active:focus,.button.active:focus{outline:thin dotted;outline:5px auto -webkit-focus-ring-color;outline-offset:-2px}.button:hover,.button:focus{color:#ffffff;text-decoration:none}.button:active,.button.active{outline:0;background-image:none;-webkit-box-shadow:inset 0 3px 5px rgba(0,0,0,0.125);box-shadow:inset 0 3px 5px rgba(0,0,0,0.125)}.button.disabled,.button[disabled],fieldset[disabled] .button{cursor:not-allowed;pointer-events:none;opacity:0.65;filter:alpha(opacity=65);-webkit-box-shadow:none;box-shadow:none}
