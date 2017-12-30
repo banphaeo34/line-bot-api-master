@@ -1,3 +1,4 @@
+<meta http-equiv="Content-Type" content="text/html; charset=windows-874">
 <?php
 // กรณีต้องการตรวจสอบการแจ้ง error ให้เปิด 3 บรรทัดล่างนี้ให้ทำงาน กรณีไม่ ให้ comment ปิดไป
 ini_set('display_errors', 1);
