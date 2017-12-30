@@ -9,5 +9,5 @@ mysql_connect($Setup_Server,$Setup_User,$Setup_Pwd);
 
 mysql_query("use $Setup_Database");
 mysql_query("SET NAMES UTF8");
-
+echo "OK";
 ?>
