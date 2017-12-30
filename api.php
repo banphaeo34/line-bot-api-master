@@ -14,14 +14,14 @@ $_msg = $arrJson['events'][0]['message']['text'];
 
 
 $api_key="<MLAB APIKEY>";
-$url = 'https://api.mlab.com/api/1/databases/duckduck/collections/linebot?apiKey='.$api_key.'';
-$json = file_get_contents('https://api.mlab.com/api/1/databases/duckduck/collections/linebot?apiKey='.$api_key.'&q={"question":"'.$_msg.'"}');
+$url = 'https://api.mlab.com/api/1/databases/heroku_js2t8p1k/collections/linebot?apiKey='.$api_key.'';
+$json = file_get_contents('https://api.mlab.com/api/1/databases/heroku_js2t8p1k/collections/linebot?apiKey='.$api_key.'&q={"question":"'.$_msg.'"}');
 $data = json_decode($json);
 $isData=sizeof($data);
 
-if (strpos($_msg, '�͹��') !== false) {
-  if (strpos($_msg, '�͹��') !== false) {
-    $x_tra = str_replace("�͹��","", $_msg);
+if (strpos($_msg, 'ÊÍ¹à»ç´') !== false) {
+  if (strpos($_msg, 'ÊÍ¹à»ç´') !== false) {
+    $x_tra = str_replace("ÊÍ¹à»ç´","", $_msg);
     $pieces = explode("|", $x_tra);
     $_question=str_replace("[","",$pieces[0]);
     $_answer=str_replace("]","",$pieces[1]);
@@ -44,7 +44,7 @@ if (strpos($_msg, '�͹��') !== false) {
     $arrPostData = array();
     $arrPostData['replyToken'] = $arrJson['events'][0]['replyToken'];
     $arrPostData['messages'][0]['type'] = "text";
-    $arrPostData['messages'][0]['text'] = '�ͺ�س����͹��';
+    $arrPostData['messages'][0]['text'] = '¢Íº¤Ø³·ÕèÊÍ¹à»ç´';
   }
 }else{
   if($isData >0){
@@ -58,7 +58,7 @@ if (strpos($_msg, '�͹��') !== false) {
     $arrPostData = array();
     $arrPostData['replyToken'] = $arrJson['events'][0]['replyToken'];
     $arrPostData['messages'][0]['type'] = "text";
-    $arrPostData['messages'][0]['text'] = '��Һ� �س����ö�͹����Ҵ����§�����: �͹��[�Ӷ��|�ӵͺ]';
+    $arrPostData['messages'][0]['text'] = '¡êÒºº ¤Ø³ÊÒÁÒÃ¶ÊÍ¹ãËé©ÅÒ´ä´éà¾ÕÂ§¾ÔÁ¾ì: ÊÍ¹à»ç´[¤Ó¶ÒÁ|¤ÓµÍº]';
   }
 }
 
