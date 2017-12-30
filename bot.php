@@ -10,8 +10,8 @@ require_once './vendor/autoload.php';
 // ¡ÒÃµÑé§à¡ÕèÂÇ¡Ñº bot
 require_once 'bot_settings.php';
  
-// ¡Ã³ÕÁÕ¡ÒÃàª×èÍÁµèÍ¡Ñº°Ò¹¢éÍÁÙÅ
-//require_once("dbconnect.php");
+// ติดต่อฐานข้อมูล
+require_once("dbconnect.php");
  
 ///////////// ÊèÇ¹¢Í§¡ÒÃàÃÕÂ¡ãªé§Ò¹ class ¼èÒ¹ namespace
 use LINE\LINEBot;
