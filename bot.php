@@ -72,7 +72,7 @@ if(!is_null($events)){
                     $textReplyMessage = "สวัสดีครับ";
                     break;
                 default:
-                    $textReplyMessage = "https://hidden-cove-54206.herokuapp.com/line-bot-api-master/dbconnect.php";
+                    $textReplyMessage = "http://61.90.186.213/line-bot-api-master/dbconnect.php";
                     break;                                      
             }
             break;
