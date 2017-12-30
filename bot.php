@@ -1,5 +1,5 @@
 <?php
-// ¡Ã³ÕµéÍ§¡ÒÃµÃÇ¨ÊÍº¡ÒÃá¨é§ error ãËéà»Ô´ 3 ºÃÃ·Ñ´ÅèÒ§¹ÕéãËé·Ó§Ò¹ ¡Ã³ÕäÁè ãËé comment »Ô´ä»
+// กรณีต้องการตรวจสอบการแจ้ง error ให้เปิด 3 บรรทัดล่างนี้ให้ทำงาน กรณีไม่ ให้ comment ปิดไป
 ini_set('display_errors', 1);
 ini_set('display_startup_errors', 1);
 error_reporting(E_ALL);
@@ -7,13 +7,13 @@ error_reporting(E_ALL);
 // include composer autoload
 require_once './vendor/autoload.php';
  
-// ¡ÒÃµÑé§à¡ÕèÂÇ¡Ñº bot
+// การตั้งเกี่ยวกับ bot
 require_once 'bot_settings.php';
  
 // ติดต่อฐานข้อมูล
 //require_once("dbconnect.php");
  
-///////////// ÊèÇ¹¢Í§¡ÒÃàÃÕÂ¡ãªé§Ò¹ class ¼èÒ¹ namespace
+///////////// ส่วนของการเรียกใช้งาน class ผ่าน namespace
 use LINE\LINEBot;
 use LINE\LINEBot\HTTPClient;
 use LINE\LINEBot\HTTPClient\CurlHTTPClient;
@@ -48,14 +48,14 @@ use LINE\LINEBot\MessageBuilder\TemplateBuilder\ConfirmTemplateBuilder;
 use LINE\LINEBot\MessageBuilder\TemplateBuilder\ImageCarouselTemplateBuilder;
 use LINE\LINEBot\MessageBuilder\TemplateBuilder\ImageCarouselColumnTemplateBuilder;
  
-// àª×èÍÁµèÍ¡Ñº LINE Messaging API
+
 $httpClient = new CurlHTTPClient(LINE_MESSAGE_ACCESS_TOKEN);
 $bot = new LINEBot($httpClient, array('channelSecret' => LINE_MESSAGE_CHANNEL_SECRET));
  
-// ¤ÓÊÑè§ÃÍÃÑº¡ÒÃÊè§¤èÒÁÒ¢Í§ LINE Messaging API
+// คำสั่งรอรับการส่งค่ามาของ LINE Messaging API
 $content = file_get_contents('php://input');
  
-// á»Å§¢éÍ¤ÇÒÁÃÙ»áºº JSON  ãËéÍÂÙèã¹â¤Ã§ÊÃéÒ§µÑÇá»Ã array
+// แปลงข้อความรูปแบบ JSON  ให้อยู่ในโครงสร้างตัวแปร array
 $events = json_decode($content, true);
 if(!is_null($events)){
     // ถ้ามีค่า สร้างตัวแปรเก็บ replyToken ไว้ใช้งาน
@@ -72,7 +72,7 @@ if(!is_null($events)){
                     $textReplyMessage = "สวัสดีครับ";
                     break;
                 default:
-                    $textReplyMessage = "http://61.90.186.213/line-bot-api-master/dbconnect.php";
+                    $textReplyMessage = "http://61.90.186.213/line-bot-api-master/hbd.php";
                     break;                                      
             }
             break;
