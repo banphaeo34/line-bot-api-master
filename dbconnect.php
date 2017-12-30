@@ -1,5 +1,5 @@
 <?php
-$Setup_Server = '61.90.186.213';
+$Setup_Server = 'localhost';
 $Setup_User = 'root';
 $Setup_Pwd = '**11305bpi';
 
