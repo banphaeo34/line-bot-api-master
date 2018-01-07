@@ -21,7 +21,7 @@ $isData=sizeof($data);
 
 if (strpos($_msg, 'กล้วยไม้') !== false) {
   if (strpos($_msg, 'กล้วยไม้') !== false) {
-    $x_tra = str_replace("ÊÍ¹à»ç´","", $_msg);
+    $x_tra = str_replace("กล้วยไม้","", $_msg);
     $pieces = explode("|", $x_tra);
     $_question=str_replace("[","",$pieces[0]);
     $_answer=str_replace("]","",$pieces[1]);
