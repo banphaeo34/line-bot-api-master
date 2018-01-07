@@ -58,7 +58,7 @@ if (strpos($_msg, 'กล้วยไม้') !== false) {
     $arrPostData = array();
     $arrPostData['replyToken'] = $arrJson['events'][0]['replyToken'];
     $arrPostData['messages'][0]['type'] = "text";
-    $arrPostData['messages'][0]['text'] = 'ก๊าบบ คุณสามารถสอนให้ฉลาดได้เพียงพิมพ์: สอนกล้วยไม้[คำถาม|คำตอบ]';
+    $arrPostData['messages'][0]['text'] = 'ก๊าบบ คุณสามารถสอนให้ฉลาดได้เพียงพิมพ์: กล้วยไม้[คำถาม|คำตอบ]';
   }
 }
 
